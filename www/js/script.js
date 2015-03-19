@@ -1,6 +1,11 @@
-window.onload = function() {
-	var username = "iwood@uwo.ca";
-	var password = "thisisapassword";
+$(document).ready(function() {
+	$('.player').hide();
+	$('#loginButton').on('click', initCourseButtons);
+});
+
+function initCourseButtons() {
+	var username = $('#username').val();
+	var password = $('#password').val();
 
 	$.ajax({
 		type: 'POST',
@@ -19,6 +24,8 @@ window.onload = function() {
 				'Authorization':'Bearer ' + token.access_token
 			}
 		}).done(function(data) {
+			$('.login').hide();
+			$('.player').show();
 
 			for (var i = 0; i < data.result.rows.length; i++)
 			{
