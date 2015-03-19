@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.dexit.mobile.app.template" version="0.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>DEX Mobile-App-Template</name>
+    <description>
+        DEX mobile application template that can show SC within mobile app.
+    </description>
+    <author email="support@dexit.co" href="http://www.dexit.co">
+        DEX Support Team
+    </author>
+    <content src="index.html"/>
+    <platform name="blackberry10">
+        <access origin="https://herokuapp.com" subdomains="true"/>
+        <access origin="https://dotcloud.com" subdomains="true"/>
+        <access origin="https://dexit.co" subdomains="true"/>
+    </platform>
+    <icon src="icon.png"/>
+    <preference name="LoadUrlTimeoutValue" value="30000"/>
+    <preference name="LogLevel" value="INFO"/>
+    <platform name="ios">
+        <preference name="AllowInlineMediaPlayback" value="true"/>
+        <preference name="EnableViewportScale" value="true" />
+        <preference name="MediaPlaybackRequiresUserAction" value="false"/>
+    </platform>
+    <platform name="android">
+        <access origin="*" />
+    </platform>
+    <access origin="*" />
+</widget>

@@ -1,0 +1,6 @@
+platforms
+.idea
+node_modules
+www/lib/
+plugins/
+.DS_Store
